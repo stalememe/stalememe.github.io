@@ -19,6 +19,22 @@
         padding:30px;
       }
 
+      p {
+        position: fixed;
+        bottom:10px;
+        right:10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        opacity:0.5;
+      }
+
       @media (max-width:450px) {
         h1 {
           margin-top:100px;
@@ -35,5 +51,13 @@
   </head>
   <body>
     <h1>that's a really stale meme friendo :^(</h1>
+    <p id="info" onclick="info()">?</p>
+
+    <script>
+      function info() {
+        console.log("test");
+        document.getElementById("info").innerHTML = "<a href=\"https://github.com/stalememe/stalememe.github.io/\">view source</a>";
+      }
+    </script>
   </body>
 </html>
